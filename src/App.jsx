@@ -1,15 +1,23 @@
 import "./App.css";
-import MyRepetitiveCard from "./components/card";
+import React from "react";
+import Header from "./components/Header";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 
 function App() {
-  const array = [1, 2, 3];
   return (
-    <div className="App">
-      {array.map((item) => {
-        console.log("test");
-        return <MyRepetitiveCard />;
-      })}
-    </div>
+    <>
+      {/* Add your other components here */}
+      <Header />
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
+      <Footer />
+    </>
   );
 }
 
