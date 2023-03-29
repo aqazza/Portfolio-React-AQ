@@ -15,7 +15,7 @@ export default function Contact() {
 
   return (
     <div className="mt-16">
-      <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
+      <h2 className="text-2xl font-semibold mb-4">Contact Me</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
