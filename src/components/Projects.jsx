@@ -11,7 +11,7 @@ const Projects = () => {
       description:
         "Built a music application that allows users to comment and interact with each other while enjoying endless music.",
       image: JukeJoint,
-      url: "https://juke-joint.herokuapp.com/",
+      url: "https://jukejoint.herokuapp.com/login",
       githubUrl: "https://github.com/aqazza/Juke-Joint",
     },
     {
