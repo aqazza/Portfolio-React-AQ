@@ -1,4 +1,7 @@
 import React from "react";
+import DymeScreenshot from "../assets/images/DymeScreenshot.png";
+import UrbanInfo from "../assets/images/UrbanInfo.png";
+import JukeJoint from "../assets/images/JukeJoint.png";
 
 const Projects = () => {
   const projects = [
@@ -7,8 +10,8 @@ const Projects = () => {
       title: "Juke Joint",
       description:
         "Built a music application that allows users to comment and interact with each other while enjoying endless music.",
-      image: "https://via.placeholder.com/150",
-      url: "https://example.com/project1",
+      image: JukeJoint,
+      url: "https://juke-joint.herokuapp.com/",
       githubUrl: "https://github.com/aqazza/Juke-Joint",
     },
     {
@@ -16,8 +19,8 @@ const Projects = () => {
       title: "Dyme",
       description:
         "Software application designed to help users track their income and expenses and monitor their spending habits.",
-      image: "https://via.placeholder.com/150",
-      url: "https://example.com/project2",
+      image: DymeScreenshot,
+      url: "https://dyme.herokuapp.com/",
       githubUrl: "https://github.com/aqazza/Dyme",
     },
     {
@@ -25,7 +28,7 @@ const Projects = () => {
       title: "Urban Info",
       description:
         "The main objective of this project was to provide the user with information about important urban areas. It features different area qualities that the user can access to display more detailed information about urban areas.",
-      image: "https://via.placeholder.com/150",
+      image: UrbanInfo,
       url: "https://noahfajarda.github.io/Urban-Info/",
       githubUrl: "https://github.com/aqazza/Urban-Info",
     },
