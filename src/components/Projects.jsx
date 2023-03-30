@@ -2,6 +2,9 @@ import React from "react";
 import DymeScreenshot from "../assets/images/DymeScreenshot.png";
 import UrbanInfo from "../assets/images/UrbanInfo.png";
 import JukeJoint from "../assets/images/JukeJoint.png";
+import CSS from "../assets/images/CSS.png";
+import Node from "../assets/images/Node.png";
+import mongoDB from "../assets/images/mongoDB.png";
 
 const Projects = () => {
   const projects = [
@@ -44,7 +47,7 @@ const Projects = () => {
     {
       id: 2,
       title: "CSS",
-      skillImage: "https://cdn-icons-png.flaticon.com/512/919/919826.png",
+      skillImage: CSS,
     },
     {
       id: 3,
@@ -58,35 +61,42 @@ const Projects = () => {
       skillImage:
         "https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png",
     },
+    {
+      id: 5,
+      title: "Node.js",
+      skillImage: Node,
+    },
+    {
+      id: 6,
+      title: "MongoDB",
+      skillImage: mongoDB,
+    },
   ];
 
   return (
-    <div>
-      <h2 className="text-2xl font-bold">Projects</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    <div class="container mx-auto px-4 lg:px-0">
+      <h2 class="text-3xl font-bold mb-10">Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
-          <div
-            key={project.id}
-            className="bg-white overflow-hidden shadow rounded-lg"
-          >
+          <div class="bg-white overflow-hidden shadow rounded-lg">
             <a href={project.url} target="_blank" rel="noopener noreferrer">
               <img
-                className="w-full h-48 object-cover"
+                class="w-full h-48 object-cover"
                 src={project.image}
                 alt={project.title}
               />
             </a>
-            <div className="px-4 py-4">
-              <h3 className="text-lg font-medium text-gray-900 mb-2">
+            <div class="p-4">
+              <h3 class="text-lg font-medium text-gray-900 mb-2">
                 {project.title}
               </h3>
-              <p className="text-gray-700 mb-2">{project.description}</p>
-              <div className="flex items-center justify-between">
+              <p class="text-gray-700 mb-4">{project.description}</p>
+              <div class="flex justify-between">
                 <a
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-indigo-600 hover:text-indigo-900"
+                  class="text-indigo-600 hover:text-indigo-900"
                 >
                   Live
                 </a>
@@ -94,7 +104,7 @@ const Projects = () => {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-indigo-600 hover:text-indigo-900"
+                  class="text-indigo-600 hover:text-indigo-900"
                 >
                   Github
                 </a>
@@ -103,19 +113,16 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <h2 className="text-3xl font-bold mt-10 mb-5">Coding Skills</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+      <h2 class="text-3xl font-bold mt-20 mb-10">Coding Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3  gap-10">
         {skills.map((skill) => (
-          <div
-            key={skill.id}
-            className="bg-transparent rounded-lg shadow-md overflow-hidden text-center"
-          >
+          <div class="bg-transparent rounded-lg shadow-md overflow-hidden text-center">
             <img
+              class="w-full h-32 object-contain"
               src={skill.skillImage}
               alt={skill.title}
-              className="w-full h-32 object-contain"
             />
-            <h3 className="text-lg font-semibold my-3">{skill.title}</h3>
+            <h3 class="text-lg font-semibold my-4">{skill.title}</h3>
           </div>
         ))}
       </div>
