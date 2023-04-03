@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Card from "./components/Card";
+import Skills from "./components/Skills";
 function App() {
   return (
     <div>
@@ -14,6 +14,7 @@ function App() {
       <NavBar />
       <Experience />
       <Projects />
+      <Skills />
       <Contact />
       {/* <Card /> */}
       <Footer />

@@ -1,11 +1,16 @@
 import React from "react";
-import "./Header.css"; // assuming that you have saved the CSS code in a file named styles.css
+import "./Header.css"; // assuming that you have saved the CSS code in a file named Header.css
 
 function Header() {
   return (
     <div className="header">
       <div className="inner-header flex">
-        <h1>Anas Qazza Portfolio</h1>
+        <div className="text-box">
+          <h1 className="heading-primary">
+            <span className="heading-primary-main">Anas Qazza</span>
+            <span className="heading-primary-sub"> Portfolio</span>
+          </h1>
+        </div>
       </div>
       <div>
         <svg
