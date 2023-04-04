@@ -104,7 +104,6 @@ p {
     font-size: 24px;
   }
 }
-
 .text-box {
   position: absolute;
   top: 40%;
@@ -114,25 +113,7 @@ p {
 }
 
 .heading-primary {
-  color: transparent;
   text-transform: uppercase;
-  background: linear-gradient(90deg, #e0e0e0, #3786b1, #e243da);
-  background-size: 600% 600%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: textGradient 10s ease-in-out infinite;
-}
-
-@keyframes textGradient {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 100% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
 }
 
 .heading-primary-main {
@@ -140,9 +121,18 @@ p {
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
-  /*  Animation decalaration   */
-  animation-name: moveInleft;
-  animation-duration: 3s;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    #e69178e5,
+    #d67b9e,
+    #29bbf0,
+    #28f3c4
+  );
+  background-size: 200% 100%;
+  animation: gradient-animation 5s ease infinite;
 }
 
 .heading-primary-sub {
@@ -150,9 +140,30 @@ p {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 15.9px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    #ee7752,
+    #e73c7e,
+    #23a6d5,
+    #23d5ab
+  );
+  background-size: 200% 100%;
+  animation: gradient-animation 5s ease infinite;
+}
 
-  animation-name: moveInRight;
-  animation-duration: 3s;
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes moveInleft {

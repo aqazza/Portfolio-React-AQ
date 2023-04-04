@@ -1,4 +1,5 @@
 import React from "react";
+import { FaGithub } from "react-icons/fa";
 import DymeScreenshot from "../assets/images/DymeScreenshot.png";
 import UrbanInfo from "../assets/images/UrbanInfo.png";
 import JukeJoint from "../assets/images/JukeJoint.png";
@@ -72,7 +73,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       class="inline-block px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition duration-200"
                     >
-                      View Code
+                      <FaGithub size={30} />
                     </a>
                   </div>
                 </div>
