@@ -22,17 +22,18 @@ const Experience = () => {
   ];
 
   return (
-    <div className="container mx-auto py-8 ">
+    <div className="container mx-auto py-8">
       <h2 className="text-3xl font-bold mb-4">Experience</h2>
       <div className="grid gap-8 md:grid-cols-2">
         {experience.map((job) => (
-          <div key={job.id} className="bg-white shadow-md rounded-lg p-6">
+          <div key={job.id} className="bg-transparent shadow-md rounded-lg p-6">
             <h3 className="text-lg font-semibold mb-2">{job.title}</h3>
-            <p className="text-gray-500 mb-2">{job.company}</p>
-            <p className="text-gray-500 mb-4">{job.date}</p>
+            <p className="text-white mb-2">{job.company}</p>{" "}
+            {/* Update font color to white */}
+            <p className="text-white mb-4">{job.date}</p>
             <ul className="list-disc ml-4">
               {job.description.split("\n").map((item, index) => (
-                <li key={index} className="text-gray-700">
+                <li key={index} className="text-white">
                   {item}
                 </li>
               ))}

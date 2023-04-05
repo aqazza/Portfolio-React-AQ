@@ -28,15 +28,15 @@ function Header() {
             />
           </defs>
           <g className="parallax">
-            <use xlinkHref="#gentle-wave" x="48" y="0" fill="#7dce94" />
-            <use xlinkHref="#gentle-wave" x="48" y="3" fill="#1ab283" />
-            <use xlinkHref="#gentle-wave" x="48" y="5" fill="#fff" />
-            <use xlinkHref="#gentle-wave" x="48" y="7" fill="#3d7c47" />
+            <use xlinkHref="#gentle-wave" x="48" y="0" fill="#0e3d5e" />
+            <use xlinkHref="#gentle-wave" x="48" y="3" fill="#097aaf" />
+            <use xlinkHref="#gentle-wave" x="48" y="5" fill="#07c1ff" />
+            <use xlinkHref="#gentle-wave" x="48" y="7" fill="#130d1c" />
           </g>
         </svg>
       </div>
       <div className="content flex">
-        <p>Made WithReact | Thanks for stopping by </p>
+        <p>Made With React | Thanks for stopping by </p>
       </div>
     </div>
   );

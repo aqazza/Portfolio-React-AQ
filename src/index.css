@@ -4,10 +4,12 @@
 
 html,
 body {
-  background: linear-gradient(60deg, rgb(43, 134, 84) 0%, rgb(23, 95, 23) 100%);
+  background: linear-gradient(60deg, rgb(28, 15, 104) 0%, #003375 100%);
+  color: #ffffff;
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
   height: 100vh;
+  font-family: "Playfair Display", serif;
 }
 
 @keyframes gradient {

@@ -20,7 +20,11 @@ p {
 .header {
   position: relative;
   text-align: center;
-  background: linear-gradient(60deg, rgb(43, 134, 84) 0%, rgb(23, 95, 23) 100%);
+  background: linear-gradient(
+    60deg,
+    rgb(28, 15, 104) 0%,
+    rgba(23, 95, 23, 0.699) 100%
+  );
   color: rgb(243, 243, 243);
 }
 .logo {
@@ -59,7 +63,8 @@ p {
   position: relative;
   height: 20vh;
   text-align: center;
-  background-color: #609966;
+  background-color: rgb(28, 15, 104);
+  color: white;
 }
 
 /* Animation */
