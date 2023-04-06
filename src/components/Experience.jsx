@@ -26,7 +26,7 @@ const Experience = () => {
       <h2 className="text-3xl font-bold mb-4">Experience</h2>
       <div className="grid gap-8 md:grid-cols-2">
         {experience.map((job) => (
-          <div key={job.id} className="bg-transparent shadow-md rounded-lg p-6">
+          <div key={job.id} className="bg-transparent ring-2 rounded-lg p-6">
             <h3 className="text-lg font-semibold mb-2">{job.title}</h3>
             <p className="text-white mb-2">{job.company}</p>{" "}
             {/* Update font color to white */}

@@ -1,16 +1,26 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can add your own code to send the form data to a backend or an email address
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
+
+    try {
+      await emailjs.sendForm(
+        "service_r8ig74d",
+        "template_ikcovgz",
+        e.target,
+        "n6Y7QmRojcFgzIpkY"
+      );
+
+      console.log("Email sent successfully!");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

@@ -30,7 +30,7 @@ const Footer = () => {
           <FaLinkedinIn size={20} />
         </a>
       </div>
-      <p class="text-yellow-600 text-sm mt-4">
+      <p className="text-yellow-600 text-sm mt-4">
         &copy; {new Date().getFullYear()} Anas Qazza
       </p>
     </footer>

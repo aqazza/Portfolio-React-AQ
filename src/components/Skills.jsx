@@ -40,18 +40,18 @@ const Skills = () => {
     },
   ];
   return (
-    <div class="container mx-auto px-4 lg:px-0">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-      <h2 class="text-3xl font-bold mt-20 mb-10">Coding Skills</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3  gap-10">
+    <div className="container mx-auto px-4 lg:px-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+      <h2 className="text-3xl font-bold mt-20 mb-10">Coding Skills</h2>
+      <div className="grid grid-cols-2 md:grid-cols-3  gap-10">
         {skills.map((skill) => (
-          <div class="bg-transparent rounded-lg shadow-md overflow-hidden text-center">
+          <div className="bg-transparent rounded-lg shadow-md overflow-hidden text-center">
             <img
-              class="w-full h-32 object-contain"
+              className="w-full h-32 object-contain"
               src={skill.skillImage}
               alt={skill.title}
             />
-            <h3 class="text-lg font-semibold my-4">{skill.title}</h3>
+            <h3 className="text-lg font-semibold my-4">{skill.title}</h3>
           </div>
         ))}
       </div>
