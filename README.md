@@ -2,6 +2,8 @@
 ## Portfolio-React-AQ
 My react portfolio with resume and general information
 
+[Deployed Application](https://anasqazza-portfolio.netlify.app/)
+
 ### Technologies Used
 - React
 - Tailwind CSS
