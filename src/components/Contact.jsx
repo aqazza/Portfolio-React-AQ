@@ -1,92 +1,123 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [state, handleSubmit] = useForm("moqzpdgo");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      await emailjs.sendForm(
-        "service_r8ig74d",
-        "template_ikcovgz",
-        e.target,
-        "n6Y7QmRojcFgzIpkY"
-      );
-
-      console.log("Email sent successfully!");
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  if (state.succeeded) {
+    return (
+      <p style={{ textAlign: "center" }}>
+        Thank you for contacting me! I'll get back to you soon.
+      </p>
+    );
+  }
 
   return (
-    <div className="flex items-center justify-center h-full">
-      <div className="w-full max-w-lg mt-10">
-        <h2 className="text-2xl font-semibold mb-4">Contact Me</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label
-              htmlFor="name"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="message"
-              className="block text-gray-700 font-bold mb-2"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              rows="5"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Submit
-          </button>
-        </form>
+    <form
+      onSubmit={handleSubmit}
+      style={{ maxWidth: "500px", margin: "0 auto" }}
+    >
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          marginBottom: "1rem",
+        }}
+      >
+        <label htmlFor="name" style={{ fontFamily: "cursive" }}>
+          Name
+        </label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          style={{ color: "black", fontFamily: "cursive" }}
+        />
+        <ValidationError prefix="Name" field="name" errors={state.errors} />
       </div>
-    </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          marginBottom: "1rem",
+        }}
+      >
+        <label htmlFor="email" style={{ fontFamily: "cursive" }}>
+          Email Address
+        </label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          style={{ color: "black", fontFamily: "cursive" }}
+        />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          marginBottom: "1rem",
+        }}
+      >
+        <label htmlFor="subject" style={{ fontFamily: "cursive" }}>
+          Subject
+        </label>
+        <input
+          id="subject"
+          type="text"
+          name="subject"
+          style={{ color: "black", fontFamily: "cursive" }}
+        />
+        <ValidationError
+          prefix="Subject"
+          field="subject"
+          errors={state.errors}
+        />
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          marginBottom: "1rem",
+        }}
+      >
+        <label htmlFor="message" style={{ fontFamily: "cursive" }}>
+          Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          style={{ color: "black", fontFamily: "cursive" }}
+        />
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
+        />
+      </div>
+
+      <button
+        type="submit"
+        disabled={state.submitting}
+        style={{
+          backgroundColor: "#0066CC",
+          color: "#fff",
+          borderRadius: "5px",
+          padding: "10px",
+          fontFamily: "cursive",
+          cursor: "pointer",
+          transition: "background-color 0.2s ease-in-out",
+        }}
+        onMouseOver={(e) => (e.target.style.backgroundColor = "#0052a0")}
+        onMouseOut={(e) => (e.target.style.backgroundColor = "#0066CC")}
+      >
+        {state.submitting ? "Submitting..." : "Submit"}
+      </button>
+    </form>
   );
 }

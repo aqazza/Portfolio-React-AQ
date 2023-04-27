@@ -40,13 +40,14 @@ const Projects = () => {
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap justify-center">
           <div className="w-full px-4">
-            <div className="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
+            <div className="mx-auto mb-[60px] max-w-[510px] text-left ml-0 lg:mb-20">
               <span className="text-primary mb-2 block text-lg font-semibold">
-                Some of my Projects
+                Projects
               </span>
             </div>
           </div>
         </div>
+
         <div className="-mx-4 flex flex-wrap">
           {projects.map((project) => (
             <div className="w-full px-4 md:w-1/2 lg:w-1/3" key={project.id}>

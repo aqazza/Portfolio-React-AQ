@@ -7,16 +7,17 @@ import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Skills from "./components/Skills";
+import About from "./components/About";
 function App() {
   return (
     <div>
       <Header />
       {/* <NavBar /> */}
+      <About />
       <Experience />
       <Projects />
       <Skills />
       <Contact />
-      {/* <Card /> */}
       <Footer />
     </div>
   );

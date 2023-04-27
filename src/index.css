@@ -9,7 +9,8 @@ body {
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
   height: 100vh;
-  font-family: "Playfair Display", serif;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+    "AppleGothic", sans-serif;
 }
 
 @keyframes gradient {
