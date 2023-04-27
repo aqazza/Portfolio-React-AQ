@@ -19,7 +19,7 @@ My react portfolio with resume and general information
 
 ### Features
 - Display of personal and professional information.
-- Display of professional projects with links to live demos and source code.
+- Display of professional projects made with team.
 
 ### Improvements
 - Add more projects and personal information.
